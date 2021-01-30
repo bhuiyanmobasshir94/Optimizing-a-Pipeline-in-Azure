@@ -14,11 +14,12 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 # Data is located at:
 # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 
-ds = ### YOUR CODE HERE ###
+ds = TabularDatasetFactory.from_delimited_files(["https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"])
 
 x, y = clean_data(ds)
 
 # TODO: Split data into train and test sets.
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=0)
 
 ### YOUR CODE HERE ###a
 
@@ -63,9 +64,9 @@ def main():
     run.log("Regularization Strength:", np.float(args.C))
     run.log("Max iterations:", np.int(args.max_iter))
 
-    model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
+    model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(X_train, y_train)
 
-    accuracy = model.score(x_test, y_test)
+    accuracy = model.score(X_test, y_test)
     run.log("Accuracy", np.float(accuracy))
 
 if __name__ == '__main__':
