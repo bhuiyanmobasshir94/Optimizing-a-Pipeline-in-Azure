@@ -34,7 +34,12 @@ With this pipeline I got accuracy `0.9153262518968134` for this dataset.
 Using `Automl` I found most intuitive, I just defined the data store with `TabularDatasetFactory` and passed the data to `clean_data` function and concated the data to `pandas` dataframe. After that defined the `automl_config` for `tasks`, `primary_metric` and others and then experiment the run. With logs I could see all the pipeline steps, models and their metrics. Then I could also get the best child to save the best model.
 
 ## Pipeline comparison
-**Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
+| Model | Accuracy |
+|-|-|
+| Hyperdrive | 0.9153262518968134 |
+| Automl | 0.9161 |
+
+I believe difference is trivial in accuracy and if we talk about architecture `automl` is intuitive and it uses several preprocessing steps with model variations where in hyperdrive we only tune logistic regression with predefined processing. For more imbalanced and unseen data automl would do well then hyperdrive.
 
 ## Future work
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
