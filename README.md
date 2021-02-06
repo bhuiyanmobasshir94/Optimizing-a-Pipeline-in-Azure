@@ -6,9 +6,9 @@ In this project, we build and optimize an Azure ML pipeline using the Python SDK
 This model is then compared to an Azure AutoML run.
 
 ## Summary
-**In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
+The dataset contains campaign data about prospective individuals for banks. Here we have information about clients and we are doing classification whether a client will subscribe to the bank service or not.
 
-**In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
+We followed two different approaches. One through `hyperdrive` and another with `automl`. Through hyperdrive we tried to find best hyperparameters `c` and `max_iter` which we found `3.5430558109339505` and `169.0` respectively with `0.9153262518968134` accuracy from run id `HD_a323d13a-c6a7-4160-a5af-e8444f840933_23`. And with automl we found `VotingEnsemble` with `0.9161` best accuracy where run id is `AutoML_1c1181c8-53c7-4470-a7ca-6bed4153fdb2_35`.
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
