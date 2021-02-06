@@ -42,5 +42,6 @@ Using `Automl` I found most intuitive, I just defined the data store with `Tabul
 I believe difference is trivial in accuracy and if we talk about architecture `automl` is intuitive and it uses several preprocessing steps with model variations where in hyperdrive we only tune logistic regression with predefined processing. For more imbalanced and unseen data automl would do well then hyperdrive.
 
 ## Future work
-**What are some areas of improvement for future experiments? Why might these improvements help the model?**
+
+Future improvements need borader exposer to hyperdrie and automl. We could only use one algorithm for `hyperdrive` exploration where we had time constraint for `automl`. Besides automated feature engineering can be done to see if it does better than the `clean_data` function. May be another imbalanced data set can be tested with above setup as well. 
 
