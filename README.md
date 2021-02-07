@@ -46,5 +46,7 @@ I believe difference is trivial in accuracy and if we talk about architecture `a
 Future improvements need borader exposer to hyperdrie and automl. We could only use one algorithm for `hyperdrive` exploration where we had time constraint for `automl`. Besides automated feature engineering can be done to see if it does better than the `clean_data` function. May be another imbalanced data set can be tested with above setup as well. 
 
 ## Project Review from Udacity
+Scan the below QR code to see the review of the project
+
 ![Project Review](qrcode_review.udacity.com.png?raw=true)
 
